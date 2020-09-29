@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "SmashThisButton: Custom YouTube Buttons for your audience",
     "short_name": "SmashThisButton",
-    "description": "Build custom YouTube Buttons for your audience",
+    "description": "Add custom YouTube Buttons on YouTube",
     "version": "1.3.16",
     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1vPXhP2Lp0r9PnXS7c8N+UxRiUI1iKXRkhSYsznvStgZ/aiw9UJFHhXR5du+0Lcoy2GbYNK53pUTquMGhL8KCO+OxM3NKLVk+Yyh9qgktJt0tFbSigv5w8LZXDKTXNIUOWWSMr0aWohlFoKIY6XPn44De/bkXcNyYzO10eP00BxDm11dMkQPnGR71J4qwoVnyJpAD2E9rWgDTWfoabfH2o3BOEtUcUwi75loTJbZn8Zr3A+W0ywVrNamIqdVay/c3XtsLYqAhLZ2TqWQwDWvyCqtAaUAR4/UyRZfCtTWN+CdJHZ99G9svXoklqrRyNWa2DjH29bB53ooI9osMEwXoQIDAQAB",
     "browser_action": {
