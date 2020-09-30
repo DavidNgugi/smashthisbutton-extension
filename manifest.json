@@ -1,16 +1,16 @@
 {
     "manifest_version": 2,
-    "name": "SmashThisButton: Custom YouTube Buttons for your audience",
+    "name": "SmashThisButton",
     "short_name": "SmashThisButton",
     "description": "Add custom YouTube Buttons on YouTube",
-    "version": "1.3.16",
+    "version": "0.1",
     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1vPXhP2Lp0r9PnXS7c8N+UxRiUI1iKXRkhSYsznvStgZ/aiw9UJFHhXR5du+0Lcoy2GbYNK53pUTquMGhL8KCO+OxM3NKLVk+Yyh9qgktJt0tFbSigv5w8LZXDKTXNIUOWWSMr0aWohlFoKIY6XPn44De/bkXcNyYzO10eP00BxDm11dMkQPnGR71J4qwoVnyJpAD2E9rWgDTWfoabfH2o3BOEtUcUwi75loTJbZn8Zr3A+W0ywVrNamIqdVay/c3XtsLYqAhLZ2TqWQwDWvyCqtAaUAR4/UyRZfCtTWN+CdJHZ99G9svXoklqrRyNWa2DjH29bB53ooI9osMEwXoQIDAQAB",
     "browser_action": {
-      "default_icon": "icon48.png",
+      "default_icon": "dist/favicon.ico",
       "default_title": "SmashThisButton"
     },
     "icons": {
-      "128": "icon128.png"
+      "128": "dist/img/logo.png"
     },
     "externally_connectable": {
       "matches": [
@@ -27,7 +27,7 @@
     "background": {
       "persistent": true,
       "scripts": [
-        "src/build/background.js"
+        "dist/js/background.js"
       ]
     },
     "content_scripts": [
@@ -36,19 +36,24 @@
           "*://*.youtube.com/*"
         ],
         "all_frames": true,
-        "js": ["src/build/bridge.js"]
+        "js": ["dist/js/bridge.js"]
       },
       {
-        "js": ["src/build/main.js"],
+        "matches": [
+          "https://smashthisbutton.herokuapp.com/*",
+          "http://localhost:3000/*",
+          "https://smashthisbutton.com/*",
+          "*://*.youtube.com/*"
+        ],
+        "js": ["dist/js/bridge.js"],
         "css": [
-          "src/css/root.css",
-          "src/css/remote-control.css"
+          "dist/css/app.css"
         ]
       }
     ],
     "web_accessible_resources": [
-      "src/img/*",
-      "src/css/*"
+      "dist/img/*",
+      "dist/css/*"
     ],
-    "content_security_policy": "script-src 'self' object-src 'self'"
+    "content_security_policy": "script-src 'self'; object-src 'self'"
   }
