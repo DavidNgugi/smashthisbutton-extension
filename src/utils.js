@@ -1,6 +1,9 @@
 export function _(id) { return document.getElementById(id); }
 
+export function log(msg){ console.log(msg); }
+
 export function process(){
+    log("here I am");
     var button = document.createElement("button");
     button.textContent = "Support Me";
     button.id = "smash-btn";
